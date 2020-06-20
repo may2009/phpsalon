@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <title> Book My Salon </title>
+
+	<link href="css/saloon.css" rel="stylesheet" type="text/css">
+    <link href="css/slide.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css"> 
+    <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/editor-pickslider.css" rel="stylesheet" type="text/css"> 
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/default.time.css">
+    <link rel="stylesheet" href="css/default.date.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <!-- GENERAL JAVASCRIPTS -->
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- FONTS -->
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    </head>
+    
+    
+
+    <body>
+  
+    <!-- SIGN IN SIGN UP -->
+        
+  <div class="cd-user-modal">
+  <div class="cd-user-modal-container">
+    <ul class="cd-switcher">
+      <li><a>Sign in</a></li>
+      <li><a>New account</a></li>
+    </ul>
+    <div id="cd-login">
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signin-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span></p>
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signin-password">Password</label>
+          <input class="full-width has-padding has-border" id="signin-password" type="text" placeholder="Password">
+          <a href="#" class="hide-password">Hide</a><span class="cd-error-message">Error message here!</span></p>
+        <p class="fieldset">
+          <input type="checkbox" id="remember-me" checked>
+          <label for="remember-me">Remember me</label>
+        </p>
+        <p class="fieldset">
+          <input class="full-width" type="submit" value="Login">
+        </p>
+      </form>
+      <p class="cd-form-bottom-message"><a href="#">Forgot your password?</a></p>
+    </div>
+    <div id="cd-signup">
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-username" for="signup-username">Username</label>
+          <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+          <span class="cd-error-message">Error message here!</span></p>
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signup-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span></p>
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signup-password">Password</label>
+          <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="Password">
+          <a href="#" class="hide-password">Hide</a><span class="cd-error-message">Error message here!</span></p>
+        <p class="fieldset">
+          <label class="image-replace cd-phone" for="signup-phone">Phone</label>
+          <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Phone">
+          <span class="cd-error-message">Error message here!</span></p>
+        <p class="fieldset">
+          <input type="checkbox" id="accept-terms">
+          <label for="accept-terms">I agree to the <a href="#">Terms</a></label>
+        </p>
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Create account">
+        </p>
+      </form>
+    </div>
+    <div id="cd-reset-password">
+      <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="reset-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span></p>
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Reset password">
+        </p>
+      </form>
+      <p class="cd-form-bottom-message"><a href="#">Back to log-in</a></p>
+    </div>
+    <a href="#" class="cd-close-form"> </a></div>
+</div>
+
+<!-- FIXED NAVIGATION BAR -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="ttop-nav">
+    <div class="col-md-2">
+      <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+    </div>
+    <div class="col-md-6">
+      <div class="nav-main">
+        <div class="nav">
+          <nav class="g palm-one-whole nav-secondary">
+            <ul>
+              <li><a href="^_^"> Home </a></li>
+              <li><a href="^_^"> About </a></li>
+              <li><a href="^_^"> Custom </a></li>
+              <li><a href="^_^"> Consultation </a></li>
+              <li><a href="^_^"> Blog </a></li>
+              <li><a href="^_^"> Press </a></li>
+              <li><a href="^_^"> Contact </a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="slct_cuntry">
+        <div class="box">
+          <div class="city-txt"> CITY : </div>
+          <div class="city">
+            <div class="styled-select">
+              <select>
+                <option> WASHINGTON</option>
+                <option>NEW YORK</option>
+                <option>LOS ANGELES</option>
+                <option>FLOURIDA</option>
+                <option>CHICAGO</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="signup">
+        <nav class="main-nav">
+          <ul>
+            <li><a class="cd-signin" href="#">Sign in</a></li>
+            <li><a class="cd-signup" href="#">Sign up</a></li>
+          </ul>
+        </nav>
+        <!-- <div class="login-btn"> Login </div><div class="login-btn"> SIGN UP </div>-->
+      </div>
+    </div>
+  </div>
+</nav>
+      
+<!-- BANNER -->
+        
+<div class="banner">
+  <div class="container">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <div class="inr-bnr-form">
+        <div class="bnr-form">
+          <h1> Search. Discover. Book Instantly.</h1>
+          <h2> 24/7 Access to top salon’s and spa’s </h2>
+          <div class="bnr-form-srchmain">
+            <div class="col-md-12">
+              <div class="srch-input">
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" >
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="place-select">
+                <select name="fxselect" id="fxselect">
+                  <option selected="" value="-1">Choose an effect...</option>
+                  <option value="fxCorner">Corner scale</option>
+                  <option value="fxVScale">Vertical scale</option>
+                  <option value="fxFall">Fall</option>
+                  <option value="fxFPulse">Forward pulse</option>
+                  <option value="fxRPulse">Rotate pulse</option>
+                  <option value="fxHearbeat">Hearbeat</option>
+                  <option value="fxCoverflow">Coverflow</option>
+                  <option value="fxRotateSoftly">Rotate me softly</option>
+                  <option value="fxDeal">Deal 'em</option>
+                  <option value="fxFerris">Ferris wheel</option>
+                  <option value="fxShinkansen">Shinkansen</option>
+                  <option value="fxSnake">Snake</option>
+                  <option value="fxShuffle">Shuffle</option>
+                  <option value="fxPhotoBrowse">Photo Browse</option>
+                  <option value="fxSlideBehind">Slide Behind</option>
+                  <option value="fxVacuum">Vacuum</option>
+                  <option value="fxHurl">Hurl it</option>
+                </select>
+              </div>
+            </div>
+            <div id="container"></div>
+            <div class="col-md-6">
+              <div class="date-input">
+                <input id="input_01" class="datepicker" name="date" type="text" autofocus >
+                <!-- valuee="2:30 AM" data-value="0:00" -->
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="time-input">
+                <input id="input_from" class="datepicker1" type="time" name="time" autofocus >
+                <!-- valuee="2:30 AM" data-value="0:00" -->
+              </div>
+            </div>
+            <div class="col-md-12">
+              <p class="fieldset">
+                <input type="submit" value="Search Now" class="srchbutton">
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="slider" class="aslider" data-duration="10" > <img src="images/slide/01.jpg" style="width:100%;"/><span class="bnr-form-srchmain"> </span>
+  <div class="aslide" data-duration="4"> <img src="images/slide/01.jpg"/> </div>
+  <div class="aslide" data-duration="5" > <img src="images/slide/02.jpg"/> </div>
+  <div class="aslide" data-duration="6" > <img src="images/slide/01.jpg"/> </div>
+  <div class="aslide" data-duration="7" > <img src="images/slide/02.jpg"/> </div>
+</div>
+</div>
+
+<!-- CLM 1  EASY AND SIMPLE  -->
+    
+<div class="easyclm1">
+  <div class="container">
+    <div class="row">
+      <h1> EASY AND SIMPLE </h1>
+      <div class="col-md-4">
+        <div class="easyclmlist"> <img src="images/choose_location_icon.png" alt=""/>
+          <h1> Choose your <br/>
+            location / Shop </h1>
+          <div class="easyclmlist-sparator"></div>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text . </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="easyclmlist"> <img src="images/time_date_icon.png" alt=""/>
+          <h1> Choose your <br/>
+            Time and date </h1>
+          <div class="easyclmlist-sparator"></div>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text . </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="easyclmlist"> <img src="images/submit_booking_icon.png" alt=""/>
+          <h1> Submit your <br/>
+            Bookings </h1>
+          <div class="easyclmlist-sparator"></div>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text . </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EDITORS PICKS -->
+    
+    <div class="editors-picks-main">
+    <div class="container">
+    <div class="row">
+    
+    	<h1> EDITOR’S PICKS </h1>
+        <h2> A new way to discover top salon’s. </h2>
+        <div class="editors-picks-sparator"></div>
+
+    </div>
+    </div>
+ 
+<!-- Editors Slider 1  -->
+
+<div id="editor_pick_wrap">
+  <div id="editor_pick_next">&rang;</div>
+  <div id="editor_pick_prev">&lang;</div>
+  <div id="editor_pick_slider">
+    <li>
+      <div class="col-md-3 padding0">
+        <div class="advt"> <img src="images/editors_pic/slide1.png" width="500" height="350">
+          <div class="all">
+            <div class="white">
+              <h1>Lavender Spa</h1>
+              <hr>
+              <a href="#">
+              <div class="book">BOOK NOW </div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 padding0">
+        <div class="advt"> <img src="images/editors_pic/slide2.png" width="500" height="350">
+          <div class="all">
+            <div class="white">
+              <h1>Lola Spa</h1>
+              <hr>
+              <a href="#">
+              <div class="book">BOOK NOW </div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 padding0">
+        <div class="advt"> <img src="images/editors_pic/slide3.png" width="500" height="350">
+          <div class="all">
+            <div class="white">
+              <h1>Mumice Salon</h1>
+              <hr>
+              <a href="#">
+              <div class="book">BOOK NOW </div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 padding0">
+        <div class="advt"> <img src="images/editors_pic/slider4.png" width="500" height="350">
+          <div class="all">
+            <div class="white">
+              <h1>Hola Spa</h1>
+              <hr>
+              <a href="#">
+              <div class="book">BOOK NOW </div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="col-md-3 padding0">
+        <div class="advt"> <img src="images/editors_pic/slide1.png" width="500" height="350">
+          <div class="all">
+            <div class="white">
+              <h1>Cuckoo Saloon</h1>
+              <hr>
+              <a href="#">
+              <div class="book">BOOK NOW </div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 padding0">
+        <div class="advt"> <img src="images/editors_pic/slide2.png" width="500" height="350">
+          <div class="all">
+            <div class="white">
+              <h1>Orange Salon</h1>
+              <hr>
+              <a href="#">
+              <div class="book">BOOK NOW </div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 padding0">
+        <div class="advt"> <img src="images/editors_pic/slide3.png" width="500" height="350">
+          <div class="all">
+            <div class="white">
+              <h1>Lakme Salon</h1>
+              <hr>
+              <a href="#">
+              <div class="book">BOOK NOW </div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 padding0">
+        <div class="advt"> <img src="images/editors_pic/slider4.png" width="500" height="350">
+          <div class="all">
+            <div class="white">
+              <h1>Hola Spa</h1>
+              <hr>
+              <a href="#">
+              <div class="book">BOOK NOW </div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </div>
+</div>
+</div>
+    
+<!-- WHATS NEW -->
+  <div class="wthats-new-main">
+  <div class="container">
+    <div class="row">
+      <div id="wrap">
+        <div id="next"><img src="images/wtsnw_left.png" alt=""></div>
+        <div id="prev"><img src="images/wtsnw_right.png" alt=""></div>
+        <div id="page">
+          <li class="width100">
+            <div class="out-wrap">
+              <div class="col-md-6"><img src="images/eyeliner.png"></div>
+              <div class="wts-nw-cnt col-md-6">
+                <h1>What's New?</h1>
+                <h2>A new way to discover top salon's</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <a href="#">
+                <div class="wts-shopbtn"> SHOP NOW </div>
+                </a> </div>
+            </div>
+          </li>
+          <li class="width100">
+            <div class="out-wrap">
+              <div class="col-md-6"><img src="images/whtsnw_pic2.png"></div>
+              <div class="wts-nw-cnt col-md-6">
+                <h1>What's New?</h1>
+                <h2>A new way to discover top salon's</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <a href="#">
+                <div class="wts-shopbtn"> SHOP NOW </div>
+                </a> </div>
+            </div>
+          </li>
+          <li class="width100">
+            <div class="out-wrap">
+              <div class="col-md-6"><img src="images/eyeliner.png"></div>
+              <div class="wts-nw-cnt col-md-6">
+                <h1>What's New?</h1>
+                <h2>A new way to discover top salon's</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <a href="#">
+                <div class="wts-shopbtn"> SHOP NOW </div>
+                </a> </div>
+            </div>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORY  --> 
+<div class="category-main">
+  <div class="container">
+    <div class="row">
+      <h1> BROWSE BY CATEGORY </h1>
+      <h2> A new way to discover top salon’s. </h2>
+      <div class="category-main-sparator"></div>
+      <div class="col-md-12">
+        <div class="category-iconmain">
+          <ul>
+            <a href="#">
+            <li> <img src="images/category_icon1.png" alt=""/>
+              <p> BlowOut </p>
+            </li>
+            </a> <a href="#">
+            <li> <img src="images/category_icon2.png" alt=""/>
+              <p> Nails </p>
+            </li>
+            </a> <a href="#">
+            <li> <img src="images/category_icon3.png" alt=""/>
+              <p> Hair Cut </p>
+            </li>
+            </a> <a href="#">
+            <li> <img src="images/category_icon4.png" alt=""/>
+              <p> Tanning</p>
+            </li>
+            </a> <a href="#">
+            <li> <img src="images/category_icon5.png" alt=""/>
+              <p> Facial </p>
+            </li>
+            </a> <a href="#">
+            <li> <img src="images/category_icon6.png" alt=""/>
+              <p> Massage </p>
+            </li>
+            </a> <a href="#">
+            <li> <img src="images/category_icon7.png" alt=""/>
+              <p> Hair Color </p>
+            </li>
+            </a> <a href="#">
+            <li> <img src="images/category_icon8.png" alt=""/>
+              <p> MakeUp </p>
+            </li>
+            </a> <a href="#">
+            <li> <img src="images/category_icon9.png" alt=""/>
+              <p> Brows</p>
+            </li>
+            </a> <a href="#">
+            <li> <img src="images/category_icon10.png" alt=""/>
+              <p> Bikini </p>
+            </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!-- FEATURES TESTIMONIAL --> 
+
+  <div class="testino-main">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="testino-left">
+        <div class="fturd-hd"> Featured In : </div>
+        <div class="fturd-icon">
+          <div class="fturd-icons"><img src="images/featured_logo1.png" alt=""/></div>
+          <div class="fturd-icons"><img src="images/featured_logo2.png" alt=""/></div>
+          <div class="fturd-icons"><img src="images/featured_logo3.png" alt=""/></div>
+          <div class="fturd-icons"><img src="images/featured_logo4.png" alt=""/></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="testino-right">
+        <div class="testino-hd"> Testimonials </div>
+        <div class="col-md-12">
+          <ul class="bxslider">
+            <li>
+              <blockquote>
+                <div style="width:100%; text-align:center;"> <img src="images/testimonial_pic1.png" alt=""> </div>
+                <h1> <img src="images/quote_left.png" alt=""> Lorem Ipsum is simply dummy text of the printing <img src="images/quote_right.png" alt=""> </h1>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote>
+                <div style="width:100%; text-align:center;"> <img src="images/testimonial_pic1.png" alt=""></div>
+                <h1> <img src="images/quote_left.png" alt=""> Lorem Ipsum is simply dummy text of the printing <img src="images/quote_right.png" alt=""> </h1>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote>
+                <div style="width:100%; text-align:center;"><img src="images/testimonial_pic1.png" alt=""></div>
+                <h1> <img src="images/quote_left.png" alt=""> Lorem Ipsum is simply dummy text of the printing <img src="images/quote_right.png" alt=""> </h1>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer-main">
+  <div class="container">
+    <div class="row">
+      <div class="ftr_list-main">
+        <div class="col-md-4 col-sm-6">
+          <div class="ftr_list">
+            <h1> MORE ABOUT BOOK MY SALON </h1>
+            <ul>
+              <li><a href="#"> About </a></li>
+              <li><a href="#"> Custom </a></li>
+              <li><a href="#"> Consultation </a></li>
+              <li><a href="#"> Blog </a></li>
+              <li><a href="#"> Press </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="ftr_list">
+            <h1> CUSTOMER SERVICE </h1>
+            <ul>
+              <li><a href="#"> About </a></li>
+              <li><a href="#"> Custom </a></li>
+            </ul>
+            <h1> SALON & SPA PARTNERS </h1>
+            <ul>
+              <li><a href="#"> JOIN OUR NETWORK </a></li>
+              <li><a href="#"> LOGIN </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-10">
+          <div class="ftr_list-clm3">
+            <h1> GET IN TOUCH WITH US </h1>
+            <ul>
+              <li><a href="#"> HELP </a></li>
+              <li><a href="#"> GIFT CARDS </a></li>
+            </ul>
+            <div class="ftr_logo"><img src="images/ftr_logo.jpg" alt=""></div>
+            <div class="ftr-call"> For Information call : 044 4224 4224</div>
+          </div>
+        </div>
+      </div>
+      <div class="ftr_social-main">
+        <div class="ftr_social">
+          <div class="col-md-2">
+            <div class="ftr_socil_hd"> FOLLOW US ON : </div>
+          </div>
+          <div class="col-md-10">
+            <ul>
+              <a href="#">
+              <li> <img src="images/facebook.png" alt=""/> <span class="ftr_social-txt"> FACEBOOK </span> </li>
+              </a> <a href="#">
+              <li><img src="images/youtube.png" alt=""/> <span class="ftr_social-txt"> YOUTUBE </span> </li>
+              </a> <a href="#">
+              <li> <img src="images/instagram.png" alt=""/> <span class="ftr_social-txt"> INSTAGRAM </span> </li>
+              </a> <a href="#">
+              <li> <img src="images/twitter.png" alt=""/> <span class="ftr_social-txt"> TWITTER </span> </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ftr-copyrht">
+  <div class="container">
+    <div class="row"> Copyright BOOKMYSALOM. All rights reserved. </div>
+  </div>
+</div>
+
+<!-- GENERAL JAVASCRIPT -->
+    
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script src="js/jquery.bxslider.min.js" type="text/javascript"></script>
+<script src="js/customscript.js" type="application/javascript"></script>
+    
+<!-- SIGN IN AND SIGN UP -->
+    
+<script src="js/modernizr.js"></script>  
+<script src="js/main.js"></script>
+
+<!-- TESTIMONIAL -->
+    
+<script src="js/jquery.bxslider.min.js" ></script>
+
+<!-- TIME & DATE PICKER-->
+    
+<script src="js/picker.js"></script>
+<script src="js/picker.date.js"></script>
+<script src="js/picker.time.js"></script>
+<script src="js/legacy.js"></script>
+   
+
+
+</body>
+</html>
