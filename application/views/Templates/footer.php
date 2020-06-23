@@ -80,7 +80,7 @@ if(!isset($hide_spinner)) {
 
 <div class="ftr-copyrht">
   <div class="container">
-    <div class="row"> Powered By <a href="https://www.techware.co.in/">Techware Solution </a></div>
+    <div class="row">©2020 Tous droits réservés par <a href="#">Yassine Mazouz </a></div>
   </div>
 </div>
 
